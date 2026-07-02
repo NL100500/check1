@@ -227,6 +227,9 @@ html[data-theme="light"] .theme-tog .ic-moon{display:block;}
 .about__grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:52px;align-items:start;}
 .about p{color:var(--ink-dim);}
 .about p+p{margin-top:16px;}
+.about__spec{margin-top:22px;padding:16px 18px;border-radius:16px;}
+.about__speclabel{display:block;font-family:var(--font-mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:8px;}
+.about__spectext{margin:0;color:var(--ink-2);font-size:.95rem;line-height:1.65;font-style:italic;}
 .creds{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;}
 .cred{border:1px solid var(--line);border-radius:999px;padding:8px 15px;font-size:.86rem;color:var(--ink);font-weight:600;}
 .cred b{color:var(--accent);font-family:var(--font-mono);margin-right:6px;}
@@ -643,7 +646,7 @@ body.menu-open{overflow:hidden;}
 </style>
 <link rel="canonical" href="https://nikitafit.ru/">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<meta name="keywords" content="персональный тренер, персональный тренер Москва, фитнес тренер, персональные тренировки, тренер по фитнесу, похудение, набор массы, силовые тренировки, онлайн тренер, DDX Аэропорт, Никита Фит, тренер метро Аэропорт, тренер метро Сокол">
+<meta name="keywords" content="персональный тренер, персональный тренер Москва, фитнес тренер, персональные тренировки, тренер по фитнесу, похудение, набор массы, силовые тренировки, онлайн тренер, DDX Аэропорт, Никита Фит, тренер метро Аэропорт, тренер метро Сокол, исправление осанки, тренировки от целлюлита, подготовка к пляжному сезону, подготовка спортсменов">
 <meta name="author" content="Никита Лукьянов">
 <meta name="theme-color" content="#0A0D13" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#F3F5F9" media="(prefers-color-scheme: light)">
@@ -670,7 +673,7 @@ body.menu-open{overflow:hidden;}
 <meta name="twitter:image" content="https://nikitafit.ru/og-image.jpg">
 <meta name="twitter:image:alt" content="Никита Фит — персональный тренер">
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["LocalBusiness","SportsActivityLocation"],"@id":"https://nikitafit.ru/#business","name":"Никита Фит","alternateName":"Nikita Fit","description":"Персональный тренер в Москве и Московской области. Индивидуальные программы под цель: похудение, набор массы, сила, рельеф. 15 лет опыта, 150+ клиентов. Первая консультация — бесплатно.","url":"https://nikitafit.ru/","image":"https://nikitafit.ru/og-image.jpg","logo":"https://nikitafit.ru/og-image.jpg","telephone":"+79775325064","email":"contact@nikitafit.ru","priceRange":"₽₽","currenciesAccepted":"RUB","paymentAccepted":"Наличные, банковская карта","areaServed":[{"@type":"City","name":"Москва"},{"@type":"AdministrativeArea","name":"Московская область"}],"address":{"@type":"PostalAddress","streetAddress":"ул. Усиевича, 12/14, РЦ «Место встречи Баку», этаж 4","addressLocality":"Москва","addressRegion":"Москва","postalCode":"125315","addressCountry":"RU"},"location":{"@type":"Place","name":"Фитнес-клуб DDX Аэропорт","description":"4 этаж РЦ «Место встречи Баку»; рядом станции метро Аэропорт и Сокол (Замоскворецкая линия, линия 2)","hasMap":"https://yandex.ru/maps/org/ddx_fitness/89757285561/","address":{"@type":"PostalAddress","streetAddress":"ул. Усиевича, 12/14, РЦ «Место встречи Баку», этаж 4","addressLocality":"Москва","postalCode":"125315","addressCountry":"RU"}},"sameAs":["https://t.me/Ni_Kit_fit","https://instagram.com/ni_kit_fitness"],"hasMap":"https://yandex.ru/maps/org/ddx_fitness/89757285561/","founder":{"@id":"https://nikitafit.ru/#trainer"},"employee":{"@id":"https://nikitafit.ru/#trainer"},"makesOffer":{"@id":"https://nikitafit.ru/#service"},"knowsLanguage":["ru","en"]},{"@type":"Person","@id":"https://nikitafit.ru/#trainer","name":"Никита Лукьянов","alternateName":"Nikita Lukyanov","jobTitle":"Персональный тренер","url":"https://nikitafit.ru/","image":"https://nikitafit.ru/og-image.jpg","worksFor":{"@id":"https://nikitafit.ru/#business"},"sameAs":["https://t.me/Ni_Kit_fit","https://instagram.com/ni_kit_fitness"],"knowsAbout":["Персональные тренировки","Похудение","Набор мышечной массы","Силовые тренировки","Функциональный тренинг","Здоровье и фитнес","Составление программ тренировок"],"workLocation":{"@type":"Place","name":"Фитнес-клуб DDX Аэропорт, Москва"}},{"@type":"Service","@id":"https://nikitafit.ru/#service","serviceType":"Персональные тренировки","name":"Персональные тренировки с Никитой","provider":{"@id":"https://nikitafit.ru/#trainer"},"areaServed":[{"@type":"City","name":"Москва"},{"@type":"AdministrativeArea","name":"Московская область"}],"description":"Индивидуальные программы тренировок под твою цель: похудение, набор массы, сила, рельеф, здоровье. Очно в Москве и онлайн.","offers":{"@type":"Offer","availability":"https://schema.org/InStock","priceCurrency":"RUB","description":"Первая консультация бесплатно"}},{"@type":"WebSite","@id":"https://nikitafit.ru/#website","url":"https://nikitafit.ru/","name":"Никита Фит","inLanguage":["ru","en"],"publisher":{"@id":"https://nikitafit.ru/#business"}},{"@type":"WebPage","@id":"https://nikitafit.ru/#webpage","url":"https://nikitafit.ru/","name":"Никита Фит — персональный тренер в Москве и онлайн","description":"Персональный тренер в Москве и Московской области. Индивидуальные программы под цель: похудение, набор массы, сила, рельеф. 15 лет опыта, 150+ клиентов. Первая консультация — бесплатно.","isPartOf":{"@id":"https://nikitafit.ru/#website"},"about":{"@id":"https://nikitafit.ru/#business"},"inLanguage":"ru","primaryImageOfPage":"https://nikitafit.ru/og-image.jpg"},{"@type":"FAQPage","@id":"https://nikitafit.ru/#faq","mainEntity":[{"@type":"Question","name":"Сколько стоит первая консультация?","acceptedAnswer":{"@type":"Answer","text":"Первая консультация бесплатная. Напишите в Telegram или позвоните — обсудим цель и подберём стартовую программу."}},{"@type":"Question","name":"Где проходят тренировки?","acceptedAnswer":{"@type":"Answer","text":"Очно — в фитнес-клубе DDX Аэропорт: Москва, ул. Усиевича, 12/14, РЦ «Место встречи Баку», этаж 4. Рядом метро Аэропорт и Сокол (Замоскворецкая линия). Также провожу индивидуальные тренировки в домашних залах."}},{"@type":"Question","name":"Как записаться на тренировку?","acceptedAnswer":{"@type":"Answer","text":"Напишите в Telegram @Ni_Kit_fit, позвоните по номеру +7 977 532 5064 или отправьте письмо на contact@nikitafit.ru."}},{"@type":"Question","name":"Подойдут ли тренировки новичку?","acceptedAnswer":{"@type":"Answer","text":"Да. Для новичков есть программа «Фундамент»: ставим технику и привычку — уверенный старт без перегрузок и травм."}}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["LocalBusiness","SportsActivityLocation"],"@id":"https://nikitafit.ru/#business","name":"Никита Фит","alternateName":"Nikita Fit","description":"Персональный тренер в Москве и Московской области. Индивидуальные программы под цель: похудение, набор массы, сила, рельеф. 15 лет опыта, 150+ клиентов. Первая консультация — бесплатно.","url":"https://nikitafit.ru/","image":"https://nikitafit.ru/og-image.jpg","logo":"https://nikitafit.ru/og-image.jpg","telephone":"+79775325064","email":"contact@nikitafit.ru","priceRange":"₽₽","currenciesAccepted":"RUB","paymentAccepted":"Наличные, банковская карта","areaServed":[{"@type":"City","name":"Москва"},{"@type":"AdministrativeArea","name":"Московская область"}],"address":{"@type":"PostalAddress","streetAddress":"ул. Усиевича, 12/14, РЦ «Место встречи Баку», этаж 4","addressLocality":"Москва","addressRegion":"Москва","postalCode":"125315","addressCountry":"RU"},"location":{"@type":"Place","name":"Фитнес-клуб DDX Аэропорт","description":"4 этаж РЦ «Место встречи Баку»; рядом станции метро Аэропорт и Сокол (Замоскворецкая линия, линия 2)","hasMap":"https://yandex.ru/maps/org/ddx_fitness/89757285561/","address":{"@type":"PostalAddress","streetAddress":"ул. Усиевича, 12/14, РЦ «Место встречи Баку», этаж 4","addressLocality":"Москва","postalCode":"125315","addressCountry":"RU"}},"sameAs":["https://t.me/Ni_Kit_fit","https://instagram.com/ni_kit_fitness"],"hasMap":"https://yandex.ru/maps/org/ddx_fitness/89757285561/","founder":{"@id":"https://nikitafit.ru/#trainer"},"employee":{"@id":"https://nikitafit.ru/#trainer"},"makesOffer":{"@id":"https://nikitafit.ru/#service"},"knowsLanguage":["ru","en"]},{"@type":"Person","@id":"https://nikitafit.ru/#trainer","name":"Никита Лукьянов","alternateName":"Nikita Lukyanov","jobTitle":"Персональный тренер","url":"https://nikitafit.ru/","image":"https://nikitafit.ru/og-image.jpg","worksFor":{"@id":"https://nikitafit.ru/#business"},"sameAs":["https://t.me/Ni_Kit_fit","https://instagram.com/ni_kit_fitness"],"knowsAbout":["Персональные тренировки","Похудение","Набор мышечной массы","Силовые тренировки","Функциональный тренинг","Здоровье и фитнес","Составление программ тренировок","Исправление осанки","Коррекция целлюлита","Подготовка к пляжному сезону","Подготовка спортсменов"],"workLocation":{"@type":"Place","name":"Фитнес-клуб DDX Аэропорт, Москва"}},{"@type":"Service","@id":"https://nikitafit.ru/#service","serviceType":"Персональные тренировки","name":"Персональные тренировки с Никитой","provider":{"@id":"https://nikitafit.ru/#trainer"},"areaServed":[{"@type":"City","name":"Москва"},{"@type":"AdministrativeArea","name":"Московская область"}],"description":"Индивидуальные программы тренировок под твою цель: похудение, набор массы, сила, рельеф, здоровье. Очно в Москве и онлайн.","offers":{"@type":"Offer","availability":"https://schema.org/InStock","priceCurrency":"RUB","description":"Первая консультация бесплатно"}},{"@type":"WebSite","@id":"https://nikitafit.ru/#website","url":"https://nikitafit.ru/","name":"Никита Фит","inLanguage":["ru","en"],"publisher":{"@id":"https://nikitafit.ru/#business"}},{"@type":"WebPage","@id":"https://nikitafit.ru/#webpage","url":"https://nikitafit.ru/","name":"Никита Фит — персональный тренер в Москве и онлайн","description":"Персональный тренер в Москве и Московской области. Индивидуальные программы под цель: похудение, набор массы, сила, рельеф. 15 лет опыта, 150+ клиентов. Первая консультация — бесплатно.","isPartOf":{"@id":"https://nikitafit.ru/#website"},"about":{"@id":"https://nikitafit.ru/#business"},"inLanguage":"ru","primaryImageOfPage":"https://nikitafit.ru/og-image.jpg"},{"@type":"FAQPage","@id":"https://nikitafit.ru/#faq","mainEntity":[{"@type":"Question","name":"Сколько стоит первая консультация?","acceptedAnswer":{"@type":"Answer","text":"Первая консультация бесплатная. Напишите в Telegram или позвоните — обсудим цель и подберём стартовую программу."}},{"@type":"Question","name":"Где проходят тренировки?","acceptedAnswer":{"@type":"Answer","text":"Очно — в фитнес-клубе DDX Аэропорт: Москва, ул. Усиевича, 12/14, РЦ «Место встречи Баку», этаж 4. Рядом метро Аэропорт и Сокол (Замоскворецкая линия). Также провожу индивидуальные тренировки в домашних залах."}},{"@type":"Question","name":"Как записаться на тренировку?","acceptedAnswer":{"@type":"Answer","text":"Напишите в Telegram @Ni_Kit_fit, позвоните по номеру +7 977 532 5064 или отправьте письмо на contact@nikitafit.ru."}},{"@type":"Question","name":"Подойдут ли тренировки новичку?","acceptedAnswer":{"@type":"Answer","text":"Да. Для новичков есть программа «Фундамент»: ставим технику и привычку — уверенный старт без перегрузок и травм."}}]}]}</script>
 </head>
 <body>
 <div class="progress" id="progress"></div>
@@ -846,6 +849,10 @@ body.menu-open{overflow:hidden;}
       <div style="margin-top:22px">
         <p data-i18n="about.p1">Никита — профессиональный футболист и мастер по здоровью и фитнесу. Сертифицированный персональный тренер с 15-летним стажем: больше 150 клиентов и 150 реальных трансформаций.</p>
         <p data-i18n="about.p2">Никаких волшебных таблеток: только техника, прогрессия и режим, который реально вписывается в твою жизнь. Каждая программа собирается под тебя — под твой уровень, график и цель.</p>
+      </div>
+      <div class="about__spec glass">
+        <span class="about__speclabel" data-i18n="about.specLabel">Специализация — в его словах</span>
+        <p class="about__spectext" data-i18n="about.spec">Помогаю избавиться от кривой осанки, от целлюлита на попе💪 Подготавливаю людей к пляжному сезону☀️ Занимаюсь подготовкой спортсменов🏍🫀🫁⛹️</p>
       </div>
       <div class="creds">
         <span class="cred glass" data-i18n="about.cred1"><b>✓</b> Профессиональный футболист</span>
@@ -1122,7 +1129,7 @@ const T = {
     "about.eyebrow":"О тренере","about.title":"Почему {short}",
     "about.p1":"{short} — профессиональный футболист и мастер по здоровью и фитнесу. Сертифицированный персональный тренер с {years}-летним стажем: больше {clients} клиентов и {transformations} реальных трансформаций.",
     "about.p2":"Никаких волшебных таблеток: только техника, прогрессия и режим, который реально вписывается в твою жизнь. Каждая программа собирается под тебя — под твой уровень, график и цель.",
-    "about.cred1":"<b>✓</b> Профессиональный футболист","about.cred2":"<b>✓</b> Мастер здоровья и фитнеса","about.cred3":"<b>✓</b> Работа после травм","about.cred4":"<b>✓</b> Онлайн и офлайн",
+    "about.specLabel":"Специализация — в его словах","about.spec":"Помогаю избавиться от кривой осанки, от целлюлита на попе💪 Подготавливаю людей к пляжному сезону☀️ Занимаюсь подготовкой спортсменов🏍🫀🫁⛹️","about.cred1":"<b>✓</b> Профессиональный футболист","about.cred2":"<b>✓</b> Мастер здоровья и фитнеса","about.cred3":"<b>✓</b> Работа после травм","about.cred4":"<b>✓</b> Онлайн и офлайн",
     "about.asideTitle":"Коротко о работе",
     "about.mini1":"<b>лет</b> ведёт клиентов к результату","about.mini2":"<b>клиентов</b> прошли программы","about.mini3":"<b>Индивидуально</b> — план под тебя, без потоков","about.mini4":"<b>Сопровождение</b> — правки техники и питания",
     "action.eyebrow":"В деле","action.title":"Тренируй силу, тренируй ум",
@@ -1140,7 +1147,7 @@ const T = {
     "find.level.beginner":"Новичок","find.level.inter":"Средний","find.level.advanced":"Продвинутый",
     "find.goal.loss":"Похудеть","find.goal.muscle":"Набрать массу","find.goal.lean":"Рельеф и тонус","find.goal.strong":"Стать сильнее","find.goal.health":"Здоровье и энергия",
     "find.place.gym":"В зале","find.place.home":"Дома",
-    "find.prompt":"Ответь на все вопросы — и я покажу твою программу","find.reco":"Твой план","find.cta":"Обсудить это со мной","find.save":"Сохранить карточку","find.savedTitle":"Твоя карточка готова","find.saveHint":"Зажми и удерживай картинку, чтобы сохранить её в Фото 📸","find.share":"Поделиться","find.download":"Скачать","find.intensity":"Интенсивность","find.tierlabel":"Твой уровень","find.dolabel":"Что я сделаю для тебя","ui.swipe":"Листай →","find.reset":"Сбросить",
+    "find.prompt":"Ответь на все вопросы — и я покажу твою программу","find.reco":"Твой план","find.cta":"Обсудить план в Telegram","find.save":"Сохранить карточку","find.savedTitle":"Твоя карточка готова","find.saveHint":"Зажми и удерживай картинку, чтобы сохранить её в Фото 📸","find.share":"Поделиться","find.download":"Скачать","find.intensity":"Интенсивность","find.tierlabel":"Твой уровень","find.dolabel":"Что я сделаю для тебя","ui.swipe":"Листай →","find.reset":"Сбросить",
     "prog.eyebrow":"Программы","prog.title":"Пять маршрутов к форме","prog.sub":"Каждая программа — не PDF на всех, а каркас, который {short} настраивает под тебя.",
     "tst.eyebrow":"Отзывы","tst.title":"Результаты клиентов",
     "cta.eyebrow":"Готов начать?","cta.title":"Стань сильнее уже на этой неделе",
@@ -1167,7 +1174,7 @@ const T = {
     "about.eyebrow":"About","about.title":"Why {short}",
     "about.p1":"{short} is a professional footballer and a master of health and fitness — a certified personal trainer with {years} years of experience, over {clients} clients and {transformations} real transformations.",
     "about.p2":"No magic pills. Just technique, progression, and a routine that fits your actual life. Every program is built around you — your level, your schedule, your goal.",
-    "about.cred1":"<b>✓</b> Pro footballer","about.cred2":"<b>✓</b> Master of health & fitness","about.cred3":"<b>✓</b> Post-injury training","about.cred4":"<b>✓</b> Online & in person",
+    "about.specLabel":"Specialisation — in his own words","about.spec":"I help fix poor posture and get rid of cellulite 💪 I get people ready for beach season ☀️ And I train athletes 🏍🫀🫁⛹️","about.cred1":"<b>✓</b> Pro footballer","about.cred2":"<b>✓</b> Master of health & fitness","about.cred3":"<b>✓</b> Post-injury training","about.cred4":"<b>✓</b> Online & in person",
     "about.asideTitle":"The work, in short",
     "about.mini1":"<b>years</b> guiding clients to results","about.mini2":"<b>clients</b> have run the programs","about.mini3":"<b>One-on-one</b> — a plan for you, not a batch","about.mini4":"<b>Support</b> — technique & nutrition tweaks",
     "action.eyebrow":"In the field","action.title":"Train strong, train smart",
@@ -1184,7 +1191,7 @@ const T = {
     "find.level.beginner":"Beginner","find.level.inter":"Intermediate","find.level.advanced":"Advanced",
     "find.goal.loss":"Lose fat","find.goal.muscle":"Build muscle","find.goal.lean":"Lean & toned","find.goal.strong":"Get stronger","find.goal.health":"Health & energy",
     "find.place.gym":"At the gym","find.place.home":"At home",
-    "find.prompt":"Answer every question and I'll show your program","find.reco":"Your plan","find.cta":"Get in contact about this","find.save":"Save training card","find.savedTitle":"Your card is ready","find.saveHint":"Press and hold the image to save it to your photos 📸","find.share":"Share","find.download":"Download","find.intensity":"Intensity","find.tierlabel":"Your tier","find.dolabel":"What I'll do for you","ui.swipe":"Swipe →","find.reset":"Reset",
+    "find.prompt":"Answer every question and I'll show your program","find.reco":"Your plan","find.cta":"Discuss my plan on Telegram","find.save":"Save training card","find.savedTitle":"Your card is ready","find.saveHint":"Press and hold the image to save it to your photos 📸","find.share":"Share","find.download":"Download","find.intensity":"Intensity","find.tierlabel":"Your tier","find.dolabel":"What I'll do for you","ui.swipe":"Swipe →","find.reset":"Reset",
     "prog.eyebrow":"Programs","prog.title":"Five routes to your shape","prog.sub":"Each program isn't a one-size PDF — it's a frame {short} tunes to you.",
     "tst.eyebrow":"Reviews","tst.title":"Client results",
     "cta.eyebrow":"Ready to start?","cta.title":"Get stronger this week",
@@ -1364,7 +1371,7 @@ function renderResult(){
   $("#rMeta").innerHTML='<span class="pill"><b>'+sessionsLabel(state.days)+'</b></span><span class="pill">'+blockLabel+'</span>';
   $("#rList").innerHTML=buildDeliverables(state).map(f=>"<li>"+esc(fill(f))+"</li>").join("");
   $("#rNote").textContent=LEVEL_LINE[state.level][lang]+" "+PLACE_LINE[state.place][lang];
-  const cta=$("#rCta"); cta.textContent=t("find.cta"); cta.setAttribute("href","#contact");
+  const cta=$("#rCta"); cta.textContent=t("find.cta"); cta.setAttribute("href",buildTgPlanLink()); cta.setAttribute("target","_blank"); cta.setAttribute("rel","noopener");
 }
 const FMT_ICON={
   user:'<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M5 21a7 7 0 0 1 14 0"/></svg>',
@@ -1551,6 +1558,16 @@ async function buildPlanImage(){
   return c;
 }
 
+
+/* ── Telegram CTA with prefilled plan summary ─────────────── */
+function buildTgPlanLink(){
+  var tier=(TIERS[state.level]&&TIERS[state.level].name[lang])||"";
+  var days=(state.days==="5"?"5+":state.days);
+  var msg = lang==="ru"
+    ? "Привет, Никита! Прошёл подбор на nikitafit.ru 💪\nМоя программа: «"+tier+"»\nЦель: "+t("find.goal."+state.goal)+" · "+days+" трен/нед · "+t("find.place."+state.place)+"\nХочу записаться!"
+    : "Hi Nikita! I used the program finder on nikitafit.ru 💪\nMy program: \""+tier+"\"\nGoal: "+t("find.goal."+state.goal)+" · "+days+" sessions/week · "+t("find.place."+state.place)+"\nI'd like to book!";
+  return CONFIG.telegram+"?text="+encodeURIComponent(msg);
+}
 var _capBusy=false, _lastBlob=null;
 async function saveCard(){
   if(_capBusy) return;
@@ -1600,7 +1617,7 @@ function closeCardModal(){
       if(!blob){ var img=$("#cardModalImg"); if(img&&img.src){ var r=await fetch(img.src); blob=await r.blob(); } }
       if(!blob) return;
       var file=new File([blob],_cardFileName(),{type:"image/png"});
-      if(navigator.canShare && navigator.canShare({files:[file]})){ await navigator.share({files:[file], title:CONFIG.name[lang]}); }
+      if(navigator.canShare && navigator.canShare({files:[file]})){ await navigator.share({files:[file], title:CONFIG.name[lang], text: lang==="ru"?"Моя программа с nikitafit.ru 💪":"My program from nikitafit.ru 💪"}); }
     }catch(e){}
   });
 })();
