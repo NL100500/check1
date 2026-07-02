@@ -375,14 +375,35 @@ html[data-theme="light"] .theme-tog .ic-moon{display:block;}
 /* CONTACT */
 .contact__inner{position:relative;text-align:center;max-width:720px;margin-inline:auto;}
 .contact .lead{margin:18px auto 30px;}
-.loc{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start;text-align:left;max-width:560px;margin:42px auto 0;padding:18px 20px;border-radius:var(--radius);}
+.loc{text-align:left;max-width:560px;margin:42px auto 0;padding:18px 20px;border-radius:var(--radius);}
+.loc__left{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start;}
 .loc__body{flex:1;min-width:0;}
+.loc__embed{display:none;}
+@media(min-width:921px){
+.loc{max-width:none;display:grid;grid-template-columns:1fr 1.08fr;gap:38px;align-items:center;padding:32px 36px;margin-top:56px;}
+.loc__title{font-size:.8rem;margin-bottom:10px;}
+.loc__text{font-size:1.04rem;line-height:1.65;}
+.loc__addr{font-size:1rem;margin-top:12px;}
+.loc .loc__map{display:none;}
+.loc__embed{display:block;height:100%;min-height:380px;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--soft-bg);box-shadow:0 18px 44px -26px rgba(0,0,0,.5);}
+.loc__embed iframe{width:100%;height:100%;min-height:380px;border:0;display:block;}
+}
 .loc__icon{width:44px;height:44px;border-radius:12px;flex:none;display:grid;place-items:center;background:var(--tint);border:1px solid var(--ring);}
 .loc__icon svg{width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:1.8;}
 .loc__title{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
 .loc__text{margin:0;color:var(--ink-dim);font-size:.98rem;line-height:1.55;}
 .loc__text b{color:var(--ink);}
 .loc__addr{margin:10px 0 0;color:var(--ink);font-size:.92rem;line-height:1.5;font-weight:600;}
+.loc__metro{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin-top:12px;}
+.loc__metroicon{width:21px;height:21px;fill:#E01A22;flex:none;}
+.loc__metroname{font-weight:700;color:var(--ink);font-size:.95rem;}
+.loc__metroline{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:700;letter-spacing:.03em;padding:4px 11px;border-radius:999px;border:1px solid rgba(76,184,92,.4);background:rgba(76,184,92,.14);color:#6FCF7F;}
+.loc__metroline i{width:8px;height:8px;border-radius:50%;background:#4CB85C;flex:none;}
+html[data-theme="light"] .loc__metroline{color:#1F7A34;border-color:rgba(46,140,66,.45);background:rgba(76,184,92,.14);}
+.loc__facts{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);}
+.loc__factslabel{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-dim);}
+.loc__factlist{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px;}
+.loc__factlist li{font-size:.78rem;font-weight:600;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--chip-bg);color:var(--ink-2);}
 .loc__map{display:inline-flex;align-items:center;gap:8px;margin-left:60px;margin-top:2px;padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:var(--totop-bg);color:var(--ink);font-family:var(--font-display);font-weight:600;font-size:.78rem;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;transition:transform .18s var(--ease),border-color .18s,color .18s,box-shadow .18s;}
 .loc__map svg{width:16px;height:16px;stroke:var(--accent);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;}
 .loc__map:hover{transform:translateY(-2px);border-color:var(--accent);color:var(--accent);box-shadow:0 10px 24px -14px var(--glow);}
@@ -784,13 +805,26 @@ body.menu-open{overflow:hidden;}
       </div>
     </div>
     <div class="loc glass reveal">
+      <div class="loc__left">
       <div class="loc__icon"><svg viewBox="0 0 24 24"><path d="M12 21s-6-5.2-6-10a6 6 0 0 1 12 0c0 4.8-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg></div>
       <div class="loc__body">
         <div class="loc__title" data-i18n="cta.locTitle">Где меня найти</div>
         <p class="loc__text" data-i18n="cta.loc">Мой домашний зал — <b>Фитнес-клуб DDX Аэропорт</b> в Москве. Также провожу индивидуальные тренировки в домашних залах — напишите мне за подробностями.</p>
-        <p class="loc__addr" data-i18n="cta.locAddr">г. Москва, ул. Усиевича, 12/14, РЦ «Место встречи Баку», этаж 4 · м. Аэропорт</p>
+        <p class="loc__addr" data-i18n="cta.locAddr">г. Москва, ул. Усиевича, 12/14, РЦ «Место встречи Баку», этаж 4</p>
+        <div class="loc__metro"><svg class="loc__metroicon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.2 19.5 6.6 5h.9L12 13.6 16.5 5h.9l3.4 14.5h-3l-1.6-7.6-3.6 6.6h-1.2L7.8 11.9l-1.6 7.6z"/></svg><span class="loc__metroname" data-i18n="cta.metroName">Аэропорт</span><span class="loc__metroline"><i aria-hidden="true"></i><span data-i18n="cta.metroLine">Замоскворецкая линия · 2</span></span></div>
+        <div class="loc__facts">
+          <span class="loc__factslabel" data-i18n="cta.gymFacts">О клубе</span>
+          <ul class="loc__factlist">
+            <li data-i18n="cta.gymF1">Ежедневно 06:00–24:00</li>
+            <li data-i18n="cta.gymF2">Премиальные тренажёры</li>
+            <li data-i18n="cta.gymF3">Сауна и хаммам</li>
+            <li data-i18n="cta.gymF4">Парковка в 2 минутах</li>
+          </ul>
+        </div>
       </div>
       <a class="loc__map" href="https://yandex.ru/maps/org/ddx_fitness/89757285561/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6-5.2-6-10a6 6 0 0 1 12 0c0 4.8-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg><span data-i18n="cta.locMap">Открыть в Яндекс Картах</span></a>
+      </div>
+      <div class="loc__embed" id="locEmbed"></div>
     </div>
   </div>
 </section>
@@ -1110,7 +1144,7 @@ const T = {
     "tst.eyebrow":"Отзывы","tst.title":"Результаты клиентов",
     "cta.eyebrow":"Готов начать?","cta.title":"Стань сильнее уже на этой неделе",
     "cta.sub":"Напиши в Telegram или позвони — обсудим цель и подберём старт. Первая консультация бесплатно.",
-    "cta.locTitle":"Где меня найти","cta.locAddr":"г. Москва, ул. Усиевича, 12/14, РЦ «Место встречи Баку», этаж 4 · м. Аэропорт","cta.locMap":"Открыть в Яндекс Картах",
+    "cta.locTitle":"Где меня найти","cta.locAddr":"г. Москва, ул. Усиевича, 12/14, РЦ «Место встречи Баку», этаж 4","cta.locMap":"Открыть в Яндекс Картах","cta.metroName":"Аэропорт","cta.metroLine":"Замоскворецкая линия · 2","cta.gymFacts":"О клубе","cta.gymF1":"Ежедневно 06:00–24:00","cta.gymF2":"Премиальные тренажёры","cta.gymF3":"Сауна и хаммам","cta.gymF4":"Парковка в 2 минутах",
     "cta.loc":"Мой домашний зал — <b>{gym}</b> в Москве. Также провожу индивидуальные тренировки в домашних залах — напишите мне за подробностями.",
     "cta.tg":"Написать в Telegram","cta.call":"Позвонить","cta.mail":"Написать на почту","cta.social":"Соцсети","ui.soon":"Уже скоро","cta.qr":"Наведи камеру","cta.qropen":"Открыть Telegram","mid.pop":"Напиши мне 👋","mid.1":"Не знаешь, с чего начать? Напиши 👋","mid.2":"Хочешь так же? Погнали 💪","mid.3":"Готов работать по-настоящему?","mid.4":"Найдём твою программу вместе","mid.5":"Есть вопросы? Я на связи","mid.6":"Начни сегодня — первая встреча бесплатно","mid.7":"Тоже хочешь результат? Давай! 🔥",
     "foot.bday":"🎉 С днём рождения, {short}! Этот сайт — подарок от <a href='mailto:dan@abu.money'>твоего брата</a>."
@@ -1154,7 +1188,7 @@ const T = {
     "tst.eyebrow":"Reviews","tst.title":"Client results",
     "cta.eyebrow":"Ready to start?","cta.title":"Get stronger this week",
     "cta.sub":"Message on Telegram or call — we'll talk goals and pick your starting point. First consultation is free.",
-    "cta.locTitle":"Where to find me","cta.locAddr":"12/14 Usievicha St, Mesto Vstrechi Baku, 4th floor, Moscow · Aeroport metro","cta.locMap":"Open in Yandex Maps",
+    "cta.locTitle":"Where to find me","cta.locAddr":"12/14 Usievicha St, Mesto Vstrechi Baku, 4th floor, Moscow","cta.locMap":"Open in Yandex Maps","cta.metroName":"Aeroport","cta.metroLine":"Zamoskvoretskaya Line · 2","cta.gymFacts":"About the club","cta.gymF1":"Open daily 6:00–24:00","cta.gymF2":"Premium equipment","cta.gymF3":"Sauna & hammam","cta.gymF4":"Parking 2 min away",
     "cta.loc":"My home base is <b>{gym}</b> in Moscow. I also take special appointments for home gyms — message me for details.",
     "cta.tg":"Message on Telegram","cta.call":"Call","cta.mail":"Email","cta.social":"Follow","ui.soon":"Coming soon","cta.qr":"Scan me","cta.qropen":"Open Telegram","mid.pop":"Say hi 👋","mid.1":"Not sure where to start? Say hi 👋","mid.2":"Want the same? Let\u2019s go 💪","mid.3":"Ready to put in real work?","mid.4":"Let\u2019s find your program together","mid.5":"Got questions? I\u2019m here","mid.6":"Start today — first session\u2019s free","mid.7":"Want results too? Let\u2019s do it 🔥",
     "foot.bday":"🎉 Happy birthday, {short}! This site is a gift from <a href='mailto:dan@abu.money'>your brother</a>."
@@ -1623,6 +1657,23 @@ var _rSaveBtn=$("#rSave"); if(_rSaveBtn) _rSaveBtn.addEventListener("click",save
     location.href="yandexmaps://maps.yandex.ru/?text="+Q;
   }
   $$(".loc__map,.btn--map").forEach(function(a){ a.addEventListener("click",openMaps); });
+})();
+
+/* ── Desktop-only Yandex map embed for the location section ── */
+(function(){
+  var mq=matchMedia("(min-width:921px)");
+  function mountMap(){
+    var c=$("#locEmbed"); if(!c || c.dataset.done || !mq.matches) return;
+    c.dataset.done="1";
+    var f=document.createElement("iframe");
+    f.src="https://yandex.ru/map-widget/v1/?ol=biz&oid=89757285561&z=16";
+    f.loading="lazy"; f.title="DDX Fitness Аэропорт на карте";
+    f.setAttribute("allowfullscreen","");
+    c.appendChild(f);
+  }
+  mountMap();
+  if(mq.addEventListener) mq.addEventListener("change",mountMap);
+  else addEventListener("resize",mountMap,{passive:true});
 })();
 /* config-driven wiring */
 function wireConfig(){
