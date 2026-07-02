@@ -1601,6 +1601,29 @@ var _rSaveBtn=$("#rSave"); if(_rSaveBtn) _rSaveBtn.addEventListener("click",save
   addEventListener("pointerdown",function(e){ if(!(e.target.closest && e.target.closest(".midcta"))) closeAll(); });
   addEventListener("keydown",function(e){ if(e.key==="Escape") closeAll(); });
 })();
+
+/* ── Smart maps deep-link: Yandex app -> fallback map app ── */
+(function(){
+  var Q=encodeURIComponent("DDX Fitness, улица Усиевича, 12, Москва");
+  var WEB="https://yandex.ru/maps/org/ddx_fitness/89757285561/";
+  function openMaps(e){
+    var ua=navigator.userAgent||"";
+    var isIOS=/iPhone|iPad|iPod/i.test(ua);
+    var isAndroid=/Android/i.test(ua);
+    if(!(isIOS||isAndroid)) return; /* desktop: let the normal web link work */
+    e.preventDefault();
+    var fallback=isIOS ? ("https://maps.apple.com/?q="+Q) : ("geo:0,0?q="+Q);
+    var t=setTimeout(function(){
+      if(document.hidden) return; /* app took over */
+      location.href=fallback;
+    },1400);
+    var clear=function(){ if(document.hidden) clearTimeout(t); };
+    document.addEventListener("visibilitychange",clear,{once:true});
+    addEventListener("pagehide",function(){ clearTimeout(t); },{once:true});
+    location.href="yandexmaps://maps.yandex.ru/?text="+Q;
+  }
+  $$(".loc__map,.btn--map").forEach(function(a){ a.addEventListener("click",openMaps); });
+})();
 /* config-driven wiring */
 function wireConfig(){
   const setHref=(ids,v)=>ids.forEach(id=>{const el=$("#"+id);if(el)el.setAttribute("href",v);});
