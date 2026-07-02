@@ -401,6 +401,11 @@ html[data-theme="light"] .theme-tog .ic-moon{display:block;}
 .loc__metroicon{width:21px;height:21px;fill:#E01A22;flex:none;}
 .loc__metroname{font-weight:700;color:var(--ink);font-size:.95rem;}
 .loc__metroname--alt{color:var(--ink-dim);font-weight:600;}
+.loc__stbtn{text-decoration:none;cursor:pointer;border-bottom:1px dashed var(--line);padding-bottom:1px;transition:color .18s,border-color .18s;}
+.loc__stbtn:hover{color:var(--accent);border-bottom-color:var(--accent);}
+.loc__metrosep{color:var(--ink-dim);font-weight:700;}
+a.loc__metroline{text-decoration:none;cursor:pointer;transition:background .18s,border-color .18s,transform .18s;}
+a.loc__metroline:hover{background:rgba(76,184,92,.24);border-color:rgba(76,184,92,.6);transform:translateY(-1px);}
 .loc__metroline{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:700;letter-spacing:.03em;padding:4px 11px;border-radius:999px;border:1px solid rgba(76,184,92,.4);background:rgba(76,184,92,.14);color:#6FCF7F;}
 .loc__metroline i{width:8px;height:8px;border-radius:50%;background:#4CB85C;flex:none;}
 html[data-theme="light"] .loc__metroline{color:#1F7A34;border-color:rgba(46,140,66,.45);background:rgba(76,184,92,.14);}
@@ -815,7 +820,7 @@ body.menu-open{overflow:hidden;}
         <div class="loc__title" data-i18n="cta.locTitle">Где меня найти</div>
         <p class="loc__text" data-i18n="cta.loc">Мой домашний зал — <b>Фитнес-клуб DDX Аэропорт</b> в Москве. Также провожу индивидуальные тренировки в домашних залах — напишите мне за подробностями.</p>
         <p class="loc__addr" data-i18n="cta.locAddr">г. Москва, ул. Усиевича, 12/14, РЦ «Место встречи Баку», этаж 4</p>
-        <div class="loc__metro"><svg class="loc__metroicon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.2 19.5 6.6 5h.9L12 13.6 16.5 5h.9l3.4 14.5h-3l-1.6-7.6-3.6 6.6h-1.2L7.8 11.9l-1.6 7.6z"/></svg><span class="loc__metroname" data-i18n="cta.metroName">Аэропорт</span><span class="loc__metroname loc__metroname--alt" data-i18n="cta.metroName2">· Сокол</span><span class="loc__metroline"><i aria-hidden="true"></i><span data-i18n="cta.metroLine">Замоскворецкая линия · 2</span></span></div>
+        <div class="loc__metro"><svg class="loc__metroicon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.2 19.5 6.6 5h.9L12 13.6 16.5 5h.9l3.4 14.5h-3l-1.6-7.6-3.6 6.6h-1.2L7.8 11.9l-1.6 7.6z"/></svg><a class="loc__metroname loc__stbtn" data-mapq="метро Аэропорт, Москва" href="https://yandex.ru/maps/?text=%D0%BC%D0%B5%D1%82%D1%80%D0%BE%20%D0%90%D1%8D%D1%80%D0%BE%D0%BF%D0%BE%D1%80%D1%82%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0" target="_blank" rel="noopener" data-i18n="cta.metroName">Аэропорт</a><span class="loc__metrosep" aria-hidden="true">·</span><a class="loc__metroname loc__metroname--alt loc__stbtn" data-mapq="метро Сокол, Москва" href="https://yandex.ru/maps/?text=%D0%BC%D0%B5%D1%82%D1%80%D0%BE%20%D0%A1%D0%BE%D0%BA%D0%BE%D0%BB%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0" target="_blank" rel="noopener" data-i18n="cta.metroName2">Сокол</a><a class="loc__metroline" href="https://yandex.ru/metro/moscow" target="_blank" rel="noopener"><i aria-hidden="true"></i><span data-i18n="cta.metroLine">Замоскворецкая линия · 2</span></a></div>
         <div class="loc__facts">
           <span class="loc__factslabel" data-i18n="cta.gymFacts">О клубе</span>
           <ul class="loc__factlist">
@@ -1152,7 +1157,7 @@ const T = {
     "tst.eyebrow":"Отзывы","tst.title":"Результаты клиентов",
     "cta.eyebrow":"Готов начать?","cta.title":"Стань сильнее уже на этой неделе",
     "cta.sub":"Напиши в Telegram или позвони — обсудим цель и подберём старт. Первая консультация бесплатно.",
-    "cta.locTitle":"Где меня найти","cta.locAddr":"г. Москва, ул. Усиевича, 12/14, РЦ «Место встречи Баку», этаж 4","cta.locMap":"Открыть в Яндекс Картах","cta.metroName":"Аэропорт","cta.metroName2":"· Сокол","cta.metroLine":"Замоскворецкая линия · 2","cta.gymFacts":"О клубе","cta.gymF1":"Ежедневно 06:00–24:00","cta.gymF2":"Премиальные тренажёры","cta.gymF3":"Сауна и хаммам","cta.gymF4":"Парковка в 2 минутах",
+    "cta.locTitle":"Где меня найти","cta.locAddr":"г. Москва, ул. Усиевича, 12/14, РЦ «Место встречи Баку», этаж 4","cta.locMap":"Открыть в Яндекс Картах","cta.metroName":"Аэропорт","cta.metroName2":"Сокол","cta.metroLine":"Замоскворецкая линия · 2","cta.gymFacts":"О клубе","cta.gymF1":"Ежедневно 06:00–24:00","cta.gymF2":"Премиальные тренажёры","cta.gymF3":"Сауна и хаммам","cta.gymF4":"Парковка в 2 минутах",
     "cta.loc":"Мой домашний зал — <b>{gym}</b> в Москве. Также провожу индивидуальные тренировки в домашних залах — напишите мне за подробностями.",
     "cta.tg":"Написать в Telegram","cta.call":"Позвонить","cta.mail":"Написать на почту","cta.social":"Соцсети","ui.soon":"Уже скоро","cta.qr":"Наведи камеру","cta.qropen":"Открыть Telegram","mid.pop":"Напиши мне 👋","mid.1":"Не знаешь, с чего начать? Напиши 👋","mid.2":"Хочешь так же? Погнали 💪","mid.3":"Готов работать по-настоящему?","mid.4":"Найдём твою программу вместе","mid.5":"Есть вопросы? Я на связи","mid.6":"Начни сегодня — первая встреча бесплатно","mid.7":"Тоже хочешь результат? Давай! 🔥",
     "foot.bday":"🎉 С днём рождения, {short}! Этот сайт — подарок от <a href='mailto:dan@abu.money'>твоего брата</a>."
@@ -1196,7 +1201,7 @@ const T = {
     "tst.eyebrow":"Reviews","tst.title":"Client results",
     "cta.eyebrow":"Ready to start?","cta.title":"Get stronger this week",
     "cta.sub":"Message on Telegram or call — we'll talk goals and pick your starting point. First consultation is free.",
-    "cta.locTitle":"Where to find me","cta.locAddr":"12/14 Usievicha St, Mesto Vstrechi Baku, 4th floor, Moscow","cta.locMap":"Open in Yandex Maps","cta.metroName":"Aeroport","cta.metroName2":"· Sokol","cta.metroLine":"Zamoskvoretskaya Line · 2","cta.gymFacts":"About the club","cta.gymF1":"Open daily 6:00–24:00","cta.gymF2":"Premium equipment","cta.gymF3":"Sauna & hammam","cta.gymF4":"Parking 2 min away",
+    "cta.locTitle":"Where to find me","cta.locAddr":"12/14 Usievicha St, Mesto Vstrechi Baku, 4th floor, Moscow","cta.locMap":"Open in Yandex Maps","cta.metroName":"Aeroport","cta.metroName2":"Sokol","cta.metroLine":"Zamoskvoretskaya Line · 2","cta.gymFacts":"About the club","cta.gymF1":"Open daily 6:00–24:00","cta.gymF2":"Premium equipment","cta.gymF3":"Sauna & hammam","cta.gymF4":"Parking 2 min away",
     "cta.loc":"My home base is <b>{gym}</b> in Moscow. I also take special appointments for home gyms — message me for details.",
     "cta.tg":"Message on Telegram","cta.call":"Call","cta.mail":"Email","cta.social":"Follow","ui.soon":"Coming soon","cta.qr":"Scan me","cta.qropen":"Open Telegram","mid.pop":"Say hi 👋","mid.1":"Not sure where to start? Say hi 👋","mid.2":"Want the same? Let\u2019s go 💪","mid.3":"Ready to put in real work?","mid.4":"Let\u2019s find your program together","mid.5":"Got questions? I\u2019m here","mid.6":"Start today — first session\u2019s free","mid.7":"Want results too? Let\u2019s do it 🔥",
     "foot.bday":"🎉 Happy birthday, {short}! This site is a gift from <a href='mailto:dan@abu.money'>your brother</a>."
@@ -1656,9 +1661,10 @@ var _rSaveBtn=$("#rSave"); if(_rSaveBtn) _rSaveBtn.addEventListener("click",save
 
 /* ── Smart maps deep-link: Yandex app -> fallback map app ── */
 (function(){
-  var Q=encodeURIComponent("DDX Fitness, улица Усиевича, 12, Москва");
+  var DEFQ="DDX Fitness, улица Усиевича, 12, Москва";
   var WEB="https://yandex.ru/maps/org/ddx_fitness/89757285561/";
   function openMaps(e){
+    var Q=encodeURIComponent((e.currentTarget&&e.currentTarget.dataset&&e.currentTarget.dataset.mapq)||DEFQ);
     var ua=navigator.userAgent||"";
     var isIOS=/iPhone|iPad|iPod/i.test(ua);
     var isAndroid=/Android/i.test(ua);
@@ -1674,7 +1680,7 @@ var _rSaveBtn=$("#rSave"); if(_rSaveBtn) _rSaveBtn.addEventListener("click",save
     addEventListener("pagehide",function(){ clearTimeout(t); },{once:true});
     location.href="yandexmaps://maps.yandex.ru/?text="+Q;
   }
-  $$(".loc__map,.btn--map").forEach(function(a){ a.addEventListener("click",openMaps); });
+  $$(".loc__map,.btn--map,.loc__stbtn").forEach(function(a){ a.addEventListener("click",openMaps); });
 })();
 
 /* ── Desktop-only Yandex map embed for the location section ── */
