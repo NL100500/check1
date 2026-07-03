@@ -294,7 +294,7 @@ html[data-theme="light"] .theme-tog .ic-moon{display:block;}
 .result__note{color:var(--accent);font-size:.9rem;margin:0 0 22px;padding-top:14px;border-top:1px solid var(--line);}
 .result__cta{margin-top:auto;}
 .result__cta .btn{width:100%;}
-.result__save{margin-top:10px;width:100%;display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--font-display);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:.92rem;border:1px solid var(--line);border-radius:999px;padding:12px 22px;background:var(--totop-bg);color:var(--ink);cursor:pointer;transition:transform .18s var(--ease),box-shadow .18s var(--ease),border-color .18s var(--ease),color .18s var(--ease);}
+.result__save{margin-top:0;width:100%;display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--font-display);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:.92rem;border:1px solid var(--line);border-radius:999px;padding:12px 22px;background:var(--totop-bg);color:var(--ink);cursor:pointer;transition:transform .18s var(--ease),box-shadow .18s var(--ease),border-color .18s var(--ease),color .18s var(--ease);}
 .result__save:hover{transform:translateY(-2px);border-color:var(--accent);color:var(--accent);box-shadow:0 8px 22px rgba(0,0,0,.18);}
 .result__save:active{transform:translateY(0) scale(.98);}
 .cardModal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:20px;}
@@ -562,7 +562,7 @@ html[data-theme="light"] .loc__metroline{color:#1F7A34;border-color:rgba(46,140,
   .result__list li::before{top:8px;width:10px;}
   .result__note{font-size:.82rem;margin-bottom:11px;padding-top:10px;}
   .result__cta .btn{padding:11px 18px;font-size:.82rem;}
-  .result__save{margin-top:8px;padding:11px 18px;font-size:.82rem;}
+  .result__save{margin-top:0;padding:11px 18px;font-size:.82rem;}
   .result__reset{margin-top:8px;padding:9px 12px;font-size:.66rem;}
 }
 @media(max-width:400px){
@@ -809,7 +809,7 @@ body.menu-open{overflow:hidden;}
           <div class="result__dolabel" data-i18n="find.dolabel">Что я сделаю для тебя</div>
           <ul class="result__list" id="rList"></ul>
           <p class="result__note" id="rNote"></p>
-          <div class="result__cta"><a class="btn" id="rCta" href="#contact"></a><button type="button" class="result__save" id="rSave"><svg class="btn__ic" viewBox="0 0 24 24"><path d="M12 3v11m0 0 4-4m-4 4-4-4"/><path d="M5 17v2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2"/></svg><span data-i18n="find.save">Сохранить карточку</span></button><button type="button" class="result__reset" id="rReset" data-i18n="find.reset">Сбросить</button></div>
+          <div class="result__cta"><button type="button" class="result__save" id="rSave"><svg class="btn__ic" viewBox="0 0 24 24"><path d="M12 3v11m0 0 4-4m-4 4-4-4"/><path d="M5 17v2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2"/></svg><svg class="btn__ic" viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg><span data-i18n="find.save">Сохранить или отправить</span></button><button type="button" class="result__reset" id="rReset" data-i18n="find.reset">Сбросить</button></div>
         </div>
       </div>
     </div>
@@ -1152,7 +1152,7 @@ const T = {
     "find.level.beginner":"Новичок","find.level.inter":"Средний","find.level.advanced":"Продвинутый",
     "find.goal.loss":"Похудеть","find.goal.muscle":"Набрать массу","find.goal.lean":"Рельеф и тонус","find.goal.strong":"Стать сильнее","find.goal.health":"Здоровье и энергия",
     "find.place.gym":"В зале","find.place.home":"Дома",
-    "find.prompt":"Ответь на все вопросы — и я покажу твою программу","find.reco":"Твой план","find.cta":"Обсудить план в Telegram","find.save":"Сохранить карточку","find.savedTitle":"Твоя карточка готова","find.saveHint":"Зажми и удерживай картинку, чтобы сохранить её в Фото 📸","find.share":"Поделиться","find.download":"Скачать","find.intensity":"Интенсивность","find.tierlabel":"Твой уровень","find.dolabel":"Что я сделаю для тебя","ui.swipe":"Листай →","find.reset":"Сбросить",
+    "find.prompt":"Ответь на все вопросы — и я покажу твою программу","find.reco":"Твой план","find.cta":"Обсудить план в Telegram","find.save":"Сохранить или отправить","find.savedTitle":"Твоя карточка готова","find.saveHint":"Зажми и удерживай картинку, чтобы сохранить её в Фото 📸","find.share":"Поделиться","find.download":"Скачать","find.intensity":"Интенсивность","find.tierlabel":"Твой уровень","find.dolabel":"Что я сделаю для тебя","ui.swipe":"Листай →","find.reset":"Сбросить",
     "prog.eyebrow":"Программы","prog.title":"Пять маршрутов к форме","prog.sub":"Каждая программа — не PDF на всех, а каркас, который {short} настраивает под тебя.",
     "tst.eyebrow":"Отзывы","tst.title":"Результаты клиентов",
     "cta.eyebrow":"Готов начать?","cta.title":"Стань сильнее уже на этой неделе",
@@ -1196,7 +1196,7 @@ const T = {
     "find.level.beginner":"Beginner","find.level.inter":"Intermediate","find.level.advanced":"Advanced",
     "find.goal.loss":"Lose fat","find.goal.muscle":"Build muscle","find.goal.lean":"Lean & toned","find.goal.strong":"Get stronger","find.goal.health":"Health & energy",
     "find.place.gym":"At the gym","find.place.home":"At home",
-    "find.prompt":"Answer every question and I'll show your program","find.reco":"Your plan","find.cta":"Discuss my plan on Telegram","find.save":"Save training card","find.savedTitle":"Your card is ready","find.saveHint":"Press and hold the image to save it to your photos 📸","find.share":"Share","find.download":"Download","find.intensity":"Intensity","find.tierlabel":"Your tier","find.dolabel":"What I'll do for you","ui.swipe":"Swipe →","find.reset":"Reset",
+    "find.prompt":"Answer every question and I'll show your program","find.reco":"Your plan","find.cta":"Discuss my plan on Telegram","find.save":"Save or send","find.savedTitle":"Your card is ready","find.saveHint":"Press and hold the image to save it to your photos 📸","find.share":"Share","find.download":"Download","find.intensity":"Intensity","find.tierlabel":"Your tier","find.dolabel":"What I'll do for you","ui.swipe":"Swipe →","find.reset":"Reset",
     "prog.eyebrow":"Programs","prog.title":"Five routes to your shape","prog.sub":"Each program isn't a one-size PDF — it's a frame {short} tunes to you.",
     "tst.eyebrow":"Reviews","tst.title":"Client results",
     "cta.eyebrow":"Ready to start?","cta.title":"Get stronger this week",
@@ -1376,7 +1376,6 @@ function renderResult(){
   $("#rMeta").innerHTML='<span class="pill"><b>'+sessionsLabel(state.days)+'</b></span><span class="pill">'+blockLabel+'</span>';
   $("#rList").innerHTML=buildDeliverables(state).map(f=>"<li>"+esc(fill(f))+"</li>").join("");
   $("#rNote").textContent=LEVEL_LINE[state.level][lang]+" "+PLACE_LINE[state.place][lang];
-  const cta=$("#rCta"); cta.textContent=t("find.cta"); cta.setAttribute("href",buildTgPlanLink()); cta.setAttribute("target","_blank"); cta.setAttribute("rel","noopener");
 }
 const FMT_ICON={
   user:'<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M5 21a7 7 0 0 1 14 0"/></svg>',
@@ -1564,15 +1563,6 @@ async function buildPlanImage(){
 }
 
 
-/* ── Telegram CTA with prefilled plan summary ─────────────── */
-function buildTgPlanLink(){
-  var tier=(TIERS[state.level]&&TIERS[state.level].name[lang])||"";
-  var days=(state.days==="5"?"5+":state.days);
-  var msg = lang==="ru"
-    ? "Привет, Никита! Прошёл подбор на nikitafit.ru 💪\nМоя программа: «"+tier+"»\nЦель: "+t("find.goal."+state.goal)+" · "+days+" трен/нед · "+t("find.place."+state.place)+"\nХочу записаться!"
-    : "Hi Nikita! I used the program finder on nikitafit.ru 💪\nMy program: \""+tier+"\"\nGoal: "+t("find.goal."+state.goal)+" · "+days+" sessions/week · "+t("find.place."+state.place)+"\nI'd like to book!";
-  return CONFIG.telegram+"?text="+encodeURIComponent(msg);
-}
 var _capBusy=false, _lastBlob=null;
 async function saveCard(){
   if(_capBusy) return;
@@ -1595,12 +1585,6 @@ function openCardModal(dataURL){
   var m=$("#cardModal"); if(!m) return;
   var img=$("#cardModalImg"); if(img){ img.src=dataURL; }
   var dl=$("#cardDownload"); if(dl){ dl.href=dataURL; dl.setAttribute("download",_cardFileName()); }
-  var sh=$("#cardShare");
-  if(sh){
-    var ok=false;
-    try{ ok = !!(navigator.canShare && navigator.canShare({files:[new File([new Blob(["x"],{type:"image/png"})],"x.png",{type:"image/png"})]})); }catch(e){ ok=false; }
-    sh.style.display = ok ? "" : "none";
-  }
   m.classList.add("show"); m.setAttribute("aria-hidden","false");
   try{ document.documentElement.style.overflow="hidden"; }catch(e){}
   var c=$("#cardModalClose"); if(c){ try{ c.focus(); }catch(e){} }
@@ -1622,8 +1606,15 @@ function closeCardModal(){
       if(!blob){ var img=$("#cardModalImg"); if(img&&img.src){ var r=await fetch(img.src); blob=await r.blob(); } }
       if(!blob) return;
       var file=new File([blob],_cardFileName(),{type:"image/png"});
-      if(navigator.canShare && navigator.canShare({files:[file]})){ await navigator.share({files:[file], title:CONFIG.name[lang], text: lang==="ru"?"Моя программа с nikitafit.ru 💪":"My program from nikitafit.ru 💪"}); }
-    }catch(e){}
+      if(navigator.canShare && navigator.canShare({files:[file]})){
+        await navigator.share({files:[file], title:CONFIG.name[lang], text: lang==="ru"?"Моя программа с nikitafit.ru 💪":"My program from nikitafit.ru 💪"});
+      } else {
+        var url=URL.createObjectURL(blob);
+        var a=document.createElement("a"); a.href=url; a.download=_cardFileName(); document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(function(){ URL.revokeObjectURL(url); },4000);
+        try{ window.open(CONFIG.telegram,"_blank","noopener"); }catch(e){}
+      }
+    }catch(e){ if(e && e.name==="AbortError") return; }
   });
 })();
 var _rSaveBtn=$("#rSave"); if(_rSaveBtn) _rSaveBtn.addEventListener("click",saveCard);
