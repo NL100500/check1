@@ -820,7 +820,7 @@ body.menu-open{overflow:hidden;}
         <div class="loc__title" data-i18n="cta.locTitle">Где меня найти</div>
         <p class="loc__text" data-i18n="cta.loc">Мой домашний зал — <b>Фитнес-клуб DDX Аэропорт</b> в Москве. Также провожу индивидуальные тренировки в домашних залах — напишите мне за подробностями.</p>
         <p class="loc__addr" data-i18n="cta.locAddr">г. Москва, ул. Усиевича, 12/14, РЦ «Место встречи Баку», этаж 4</p>
-        <div class="loc__metro"><svg class="loc__metroicon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.2 19.5 6.6 5h.9L12 13.6 16.5 5h.9l3.4 14.5h-3l-1.6-7.6-3.6 6.6h-1.2L7.8 11.9l-1.6 7.6z"/></svg><a class="loc__metroname loc__stbtn" data-mapq="метро Аэропорт, Москва" href="https://yandex.ru/maps/?text=%D0%BC%D0%B5%D1%82%D1%80%D0%BE%20%D0%90%D1%8D%D1%80%D0%BE%D0%BF%D0%BE%D1%80%D1%82%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0" target="_blank" rel="noopener" data-i18n="cta.metroName">Аэропорт</a><span class="loc__metrosep" aria-hidden="true">·</span><a class="loc__metroname loc__metroname--alt loc__stbtn" data-mapq="метро Сокол, Москва" href="https://yandex.ru/maps/?text=%D0%BC%D0%B5%D1%82%D1%80%D0%BE%20%D0%A1%D0%BE%D0%BA%D0%BE%D0%BB%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0" target="_blank" rel="noopener" data-i18n="cta.metroName2">Сокол</a><a class="loc__metroline" href="https://yandex.ru/metro/moscow" target="_blank" rel="noopener"><i aria-hidden="true"></i><span data-i18n="cta.metroLine">Замоскворецкая линия · 2</span></a></div>
+        <div class="loc__metro"><svg class="loc__metroicon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.2 19.5 6.6 5h.9L12 13.6 16.5 5h.9l3.4 14.5h-3l-1.6-7.6-3.6 6.6h-1.2L7.8 11.9l-1.6 7.6z"/></svg><a class="loc__metroname loc__stbtn" href="https://yandex.ru/metro/moscow" target="_blank" rel="noopener" data-i18n="cta.metroName">Аэропорт</a><span class="loc__metrosep" aria-hidden="true">·</span><a class="loc__metroname loc__metroname--alt loc__stbtn" href="https://yandex.ru/metro/moscow" target="_blank" rel="noopener" data-i18n="cta.metroName2">Сокол</a><a class="loc__metroline" href="https://yandex.ru/metro/moscow" target="_blank" rel="noopener"><i aria-hidden="true"></i><span data-i18n="cta.metroLine">Замоскворецкая линия · 2</span></a></div>
         <div class="loc__facts">
           <span class="loc__factslabel" data-i18n="cta.gymFacts">О клубе</span>
           <ul class="loc__factlist">
@@ -1680,7 +1680,23 @@ var _rSaveBtn=$("#rSave"); if(_rSaveBtn) _rSaveBtn.addEventListener("click",save
     addEventListener("pagehide",function(){ clearTimeout(t); },{once:true});
     location.href="yandexmaps://maps.yandex.ru/?text="+Q;
   }
-  $$(".loc__map,.btn--map,.loc__stbtn").forEach(function(a){ a.addEventListener("click",openMaps); });
+  $$(".loc__map,.btn--map").forEach(function(a){ a.addEventListener("click",openMaps); });
+})();
+
+/* ── Yandex Metro opener: app first, official scheme fallback ── */
+(function(){
+  var WEB="https://yandex.ru/metro/moscow";
+  function openMetro(e){
+    var ua=navigator.userAgent||"";
+    if(!/iPhone|iPad|iPod|Android/i.test(ua)) return; /* desktop: follow href */
+    e.preventDefault();
+    var t=setTimeout(function(){ if(!document.hidden) location.href=WEB; },1400);
+    var clear=function(){ if(document.hidden) clearTimeout(t); };
+    document.addEventListener("visibilitychange",clear,{once:true});
+    addEventListener("pagehide",function(){ clearTimeout(t); },{once:true});
+    location.href="yandexmetro://";
+  }
+  $$(".loc__stbtn,a.loc__metroline").forEach(function(a){ a.addEventListener("click",openMetro); });
 })();
 
 /* ── Desktop-only Yandex map embed for the location section ── */
